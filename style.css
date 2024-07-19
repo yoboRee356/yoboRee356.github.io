@@ -1,0 +1,421 @@
+/*breakpoint: laptop + tablet screens*/
+@media only screen and (min-width: 800px)
+{
+    *{
+        /*set-up the website to have the same default settings first regardless of browser used and keep the box sizings consistent throughout the page*/
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* cursor: none; */
+        scroll-behavior: smooth;
+
+    }
+
+    body {
+        /*setting the general contents to be centered*/
+        justify-content: center;
+        align-items: center;
+        background-color: black
+    }
+
+    p{
+        border: solid red 2px;
+    }
+
+    /* this is for the cursor */
+    /* .cursor{
+        z-index: 999;
+        position: fixed;
+        background-color: #A7E6FF;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        pointer-events: none;
+        box-shadow: 0 0 20px #A7E6FF,
+                    0 0 40px #3ABEF9;
+        transform: translate(-50%, -50%);
+        display: none;
+    } */
+
+    /*this is for the cursor delay effect cus its cool*/
+    /* .cursor::before{
+        content: '';
+        position: absolute;
+        background-color: white;
+        width: 50px;
+        height: 50px;
+        opacity: 0.05;
+        transform: translate(-30%, -30%);
+        border-radius: 50%;
+    } */
+
+    /*creating css to design the waay the navbar is formed and shaped */
+    .navbar{
+        z-index: 1;
+        width: 100%;
+        top: 0px;
+        position: sticky;
+        overflow: hidden;
+        background-color: white;
+    }
+
+    /*how the list holder element will be formed */
+    .navbar ul{
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-left: 50%;
+        /* margin-right: 20%; */
+        background-color: #7e7e7e;    
+    }
+
+    /*how the individual list items will look */
+    .navbar li{
+        display: inline;
+        text-align: center;
+        list-style-type: none;
+        padding: 25px 10px;
+        background-color: #7e7e7e;
+    }
+
+    /*the links itself/words basicallu and the color behind the words */
+    .navbar a {
+        color: white;
+        background-color: #986161; 
+        text-decoration: none;
+        transition: 0.2s ease-in-out;
+    }
+    
+    .navbar a:hover {
+        padding: 25px 15px;
+        color: #c0b5ff; 
+        background-color: #986161;
+    }
+
+    .navbar a:active{
+        padding: 27px 15px;
+        color: #c0b5ff; 
+        background-color: #303030;
+    }
+
+    /*the start of the contents of the pages*/
+    .content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        text-align: center;
+        flex-direction: column;
+        margin-left: 5%;
+        margin-right: 5%;
+        border: solid white 1px;
+    }
+
+    .sharks { 
+        color: white;
+    }
+
+    .sharkImage {
+        background-image: url("https://th.bing.com/th/id/OIP.v3o49La3dLwYT7RxR2UQqQHaEK?w=290&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .sharkButtons{
+        width: 100%;
+        background-color: white;
+    }
+
+    #showTypes, #showSpecies{
+        text-align: center;
+        padding: 25px 0px;
+        width: 100%; 
+    }
+
+    .facts{
+        border: solid white 1px;
+        background-color: #0F67B1;
+    }
+
+    .quizAlign{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .quizContainer {
+        width: 450px;
+        padding: 20px;
+        margin-top: 80px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+    }
+      
+    .factsQuiz {
+        text-align: center;
+    }
+      
+    .question {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+      
+    .options {
+        margin-bottom: 20px;
+    }
+    
+    .option {
+        display: block;
+        margin-bottom: 10px;
+    }
+      
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #428bca;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        margin-right: 10px;
+    }
+    
+    .button:hover {
+        background-color: #3071a9;
+    }
+    
+    .result {
+        text-align: center;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    
+    .hide{
+        display: none;
+    }
+
+    .biology{
+        border: solid white 1px;
+        background-color: #5A72A0;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        width: 100%; 
+        height: 100%; 
+        overflow: hidden; 
+    }
+
+    /* .diagramImage{
+        margin-top: 2%;
+        margin-bottom: 2%;
+        width: 130%; 
+        height: 300px; 
+        overflow: hidden; 
+    } */
+
+    .diagramImage img{
+        width: 100%; 
+        height: 100%; 
+        object-fit: contain; 
+    }
+
+    .history{
+        border: solid white 1px;
+        background-color: #1679AB;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        width: 100%; 
+        height: 100%; 
+        overflow: hidden; 
+    }
+
+    .slideshowContainer div img {
+        width: 100%; 
+        height: 100%; 
+        object-fit: contain; 
+        border: 1px red solid;
+    }
+
+    .slideshowContainer button{
+        background-color: #986161;
+        border: 1px red solid;
+    }
+
+
+
+    #toTop{
+        position: sticky;
+        bottom: 0px;
+        width: 100%; 
+    }
+    
+    #scroll2Top{
+        text-align: center;
+        padding: 25px 0px;
+        width: 100%; 
+        color: black;
+        transition: ease-in-out .1s;
+        z-index: 99;
+    }
+
+    /* #scroll2Top:hover{
+        text-align: center;
+        padding: 20px 0px;
+        width: 100%; 
+        color: black;
+        background-color: #DDDDDD;
+    } */
+}
+
+/*breakpoint: phone screens*/
+@media only screen and (max-width: 800px)
+{
+    .navbar{
+        z-index: 1;
+        width: 100%;
+        top: 0px;
+        position: sticky;
+        overflow: hidden;
+        background-color: white;
+    }
+
+    .navbar ul{
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-left: 50%;
+        /* margin-right: 20%; */
+        background-color: #7e7e7e;    
+    }
+
+    .navbar li{
+        display: inline;
+        text-align: center;
+        list-style-type: none;
+        padding: 25px 10px;
+        background-color: #7e7e7e;
+    }
+
+    .navbar a {
+        color: white;
+        background-color: #986161; 
+        text-decoration: none;
+        position: static;
+        transition: 0.2s ease-in-out;
+    }
+    
+    .navbar a:hover {
+        padding: 27px 15px;
+        color: #c0b5ff; 
+        background-color: #986161;
+    }
+
+    .navbar a:active{
+        padding: 27px 15px;
+        color: #c0b5ff; 
+        background-color: #303030;
+    }
+
+    .facts{
+        border: solid white 1px;
+        background-color: #0F67B1;
+    }
+
+    .quizAlign{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .quizContainer {
+        width: 450px;
+        padding: 20px;
+        margin-top: 80px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+    }
+      
+    .factsQuiz {
+        text-align: center;
+    }
+      
+    .question {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+      
+    .options {
+        margin-bottom: 20px;
+    }
+    
+    .option {
+        display: block;
+        margin-bottom: 10px;
+    }
+      
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #428bca;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        margin-right: 10px;
+    }
+    
+    .button:hover {
+        background-color: #3071a9;
+    }
+    
+    .result {
+        text-align: center;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    
+    .hide{
+        display: none;
+    }
+
+    .biology{
+        border: solid white 1px;
+        background-color: #5A72A0;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        width: 100%;
+        height: 100%;
+        overflow: hidden; 
+    }
+
+    .diagramImage img{
+        width: 100%; 
+        height: 100%; 
+        object-fit: contain; 
+    }
+
+    .history{
+        border: solid white 1px;
+        background-color: #1679AB;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        width: 100%; 
+        height: 100%; 
+        overflow: hidden; 
+    }
+
+    .slideshowContainer div img {
+        width: 100%; 
+        height: 100%; 
+        object-fit: contain; 
+    }
+}

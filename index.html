@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shark Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!--adding cursor effects and animation to look more appealing-->
+    <div class="cursor"></div>
+
+    <!--navbar to guide around the pages, creata a list and then add links-->
+    <nav class="navbar" id="temp">
+        <ul>
+            <li><a id="pageSharks" href="#">Sharks</a></li>
+            <li><a id="pageFacts" href="#">Facts</a></li>
+            <li><a id="pageBiology" href="#">Biology</a></li>
+            <li><a id="pageHistory" href="#">History</a></li>
+        </ul>
+    </nav>
+
+        <!--making the contents of what to teach-->
+        <div class="content">
+            <!--1 page content: taxonomy of sharks, a short history etc-->
+            <div id="sharkPage" class="sharks" style="display: block;">
+                <div class="sharkText">
+                    <p>Sharks are a part of the subclass of fish known as the elasmobranch group as they are closely related to the Batoidea, the subclass for Ray fishes and kin.</p>
+    
+                    <p>Find out more about shark types and species with the buttons below!</p>
+                </div>
+
+                <div class="sharkImage">
+                    <img class="sharkImg1" src="https://th.bing.com/th/id/OIP.v3o49La3dLwYT7RxR2UQqQHaEK?w=290&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+                </div>
+
+                <!--subgenres of sharks where I'll talk about shark types, saltwater vs river vs etcetc, and shark species, e.g Mako Sharks. Adding boxes to interact with.-->
+                <div id="sub-content" class="sharkButtons" style="display: block;">
+                    <div class="sharkTypes">
+                        <button id="showTypes">Types Of Sharks
+                        </button>
+                            <div id="typeText" style="display: none;">Hi
+                            </div>
+                    </div>
+                    <div class="sharkSpecies"> 
+                        <button id="showSpecies">Species Of Sharks
+                        </button>
+                            <div id="speciesText"  style="display: none;">Bye
+                            </div>
+                    </div>
+                </div>
+            </div>
+        
+
+            <!--2 page content: facts of sharks like the death rates, etc -->
+            <div id="factsPage" class="facts" style="display: none;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet consectetur adipiscing elit pellentesque. Mauris sit amet massa vitae tortor condimentum lacinia. Enim tortor at auctor urna nunc id cursus. Ac tortor dignissim convallis aenean. Lobortis mattis aliquam faucibus purus in massa tempor nec. Risus nec feugiat in fermentum posuere urna. In vitae turpis massa sed elementum tempus. Sed vulputate mi sit amet mauris commodo. Dignissim sodales ut eu sem. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras.
+                <!--creating a quiz the players can interact with for forms-->
+                <div class="quizAlign">
+                    <div class="quizContainer">
+                        <h1 class="factsQuiz">Quiz Time</h1>
+                        <div id="quiz"></div>
+                        <div id="result" class="result">
+                        </div>
+                        <button id="submit" class="button">Submit</button>
+                        <button id="retry" class= "button hide">Retry</button>
+                        <button id="showAnswer" class="button hide">Show Answer</button>
+                    </div>
+                </div>  
+            </div>
+
+            <!--3 page content: biology of swim bladders, ram ventilation, etc -->
+            <div id="biologyPage" class="biology" style="display: none;">
+                <div class="diagramImage">
+                    <img src="Images/SideSharkDiagram_BioPage.png">
+                </div>
+            </div>
+
+            <!--4 page content: history of sharks and cultural perspectives of sharks in the past, etc -->
+            <div id="historyPage" class="history" style="display: none;">
+                <div class="slideshowContainer">
+                    <div id="slide1">
+                        <img src="Images/SideSharkDiagram_BioPage.png">
+                    </div>
+                    <div id="slide2">
+                        <img src="Images/SideSharkDiagram_BioPage.png">
+                    </div>
+                    <div id="slide3">
+                        <img src="Images/SideSharkDiagram_BioPage.png">
+                    </div>
+                    <div id="slide4">
+                        <img src="Images/SideSharkDiagram_BioPage.png">
+                    </div>
+
+                    <!--how to toggle between slides for both phones and laptops-->
+                    <button class="left" id="toggleLeft" onclick="toggleSlides()"></button>
+                    <button class="right" id="toggleRight" onclick="toggleSlides()"></button>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <!--the scroll to top button for each page-->
+    <footer> 
+        <div id="toTop">
+            <button onclick="go2Top()" id="scroll2Top">Scroll to top</button>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
+<!--learnt a button is supposed to do something while links are for going somewhere so i js use buttons for every action -->
