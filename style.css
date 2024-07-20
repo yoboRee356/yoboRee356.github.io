@@ -15,11 +15,7 @@
         /*setting the general contents to be centered*/
         justify-content: center;
         align-items: center;
-        background-color: black
-    }
-
-    p{
-        border: solid red 2px;
+        background-color: black;
     }
 
     /* this is for the cursor */
@@ -56,7 +52,7 @@
         top: 0px;
         position: sticky;
         overflow: hidden;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.814);
     }
 
     /*how the list holder element will be formed */
@@ -66,7 +62,6 @@
         justify-content: space-evenly;
         margin-left: 50%;
         /* margin-right: 20%; */
-        background-color: #7e7e7e;    
     }
 
     /*how the individual list items will look */
@@ -75,13 +70,12 @@
         text-align: center;
         list-style-type: none;
         padding: 25px 10px;
-        background-color: #7e7e7e;
     }
 
     /*the links itself/words basicallu and the color behind the words */
     .navbar a {
         color: white;
-        background-color: #986161; 
+        background-color: #a59bff; 
         text-decoration: none;
         transition: 0.2s ease-in-out;
     }
@@ -111,20 +105,70 @@
         border: solid white 1px;
     }
 
-    .sharks { 
+    /* .sharks { 
+        color: white;
+    } */
+
+    .sharkLayout1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+    }
+
+    .sharkText{
         color: white;
     }
 
-    .sharkImage {
+    /* .sharkImage {
         background-image: url("https://th.bing.com/th/id/OIP.v3o49La3dLwYT7RxR2UQqQHaEK?w=290&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7");
         background-position: center;
         background-repeat: no-repeat;
-    }
+        border-radius: 10px;
+    } */
 
     .sharkButtons{
         width: 100%;
         background-color: white;
     }
+
+    .QRCard{
+        background: rgb(163,160,214);
+        background: linear-gradient(253deg, rgba(163,160,214,1) 0%, rgba(37,33,205,1) 18%, rgba(38,38,138,1) 38%, rgba(18,71,122,1) 58%, rgba(3,117,183,1) 78%, rgba(117,189,204,1) 100%);
+        padding: 5px 4px;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        left: 25%;
+        width: 50%;
+        position: relative;
+    }
+
+    .QRCode{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+        border-radius: 7px;
+        background: black;
+
+    }
+
+    .QRCode p{
+        text-align: center;
+        color: white;
+
+    }
+
+    .QRCode img{
+       width: 20vw; 
+    }
+
+    .QRCode img:hover{
+        cursor: none;
+     }
 
     #showTypes, #showSpecies{
         text-align: center;
@@ -274,42 +318,87 @@
 /*breakpoint: phone screens*/
 @media only screen and (max-width: 800px)
 {
+    *{
+        /*set-up the website to have the same default settings first regardless of browser used and keep the box sizings consistent throughout the page*/
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* cursor: none; */
+        scroll-behavior: smooth;
+        font-size: 2vw;
+    }
+
+    body {
+        /*setting the general contents to be centered*/
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+
+    /* this is for the cursor */
+    /* .cursor{
+        z-index: 999;
+        position: fixed;
+        background-color: #A7E6FF;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        pointer-events: none;
+        box-shadow: 0 0 20px #A7E6FF,
+                    0 0 40px #3ABEF9;
+        transform: translate(-50%, -50%);
+        display: none;
+    } */
+
+    /*this is for the cursor delay effect cus its cool*/
+    /* .cursor::before{
+        content: '';
+        position: absolute;
+        background-color: white;
+        width: 50px;
+        height: 50px;
+        opacity: 0.05;
+        transform: translate(-30%, -30%);
+        border-radius: 50%;
+    } */
+
+    /*creating css to design the waay the navbar is formed and shaped */
     .navbar{
         z-index: 1;
         width: 100%;
         top: 0px;
         position: sticky;
+        background-color: rgba(255, 255, 255, 0.814);
         overflow: hidden;
-        background-color: white;
     }
 
+    /*how the list holder element will be formed */
     .navbar ul{
         display:flex;
         align-items: center;
         justify-content: space-evenly;
         margin-left: 50%;
         /* margin-right: 20%; */
-        background-color: #7e7e7e;    
     }
 
+    /*how the individual list items will look */
     .navbar li{
         display: inline;
         text-align: center;
         list-style-type: none;
         padding: 25px 10px;
-        background-color: #7e7e7e;
     }
 
+    /*the links itself/words basicallu and the color behind the words */
     .navbar a {
         color: white;
-        background-color: #986161; 
+        background-color: #a59bff; 
         text-decoration: none;
-        position: static;
         transition: 0.2s ease-in-out;
     }
     
     .navbar a:hover {
-        padding: 27px 15px;
+        padding: 25px 15px;
         color: #c0b5ff; 
         background-color: #986161;
     }
@@ -319,6 +408,86 @@
         color: #c0b5ff; 
         background-color: #303030;
     }
+
+    /*the start of the contents of the pages*/
+    .content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        text-align: center;
+        flex-direction: column;
+        margin-left: 5%;
+        margin-right: 5%;
+        border: solid white 1px;
+    }
+
+    /* .sharks { 
+        color: white;
+    } */
+
+    .sharkLayout1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+    }
+
+    .sharkText{
+        color: white;
+
+    }
+
+    /* .sharkImage {
+        background-image: url("https://th.bing.com/th/id/OIP.v3o49La3dLwYT7RxR2UQqQHaEK?w=290&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7");
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+    } */
+
+    .sharkButtons{
+        width: 100%;
+        background-color: white;
+    }
+
+    .QRCard{
+        background: rgb(163,160,214);
+        background: linear-gradient(253deg, rgba(163,160,214,1) 0%, rgba(37,33,205,1) 18%, rgba(38,38,138,1) 38%, rgba(18,71,122,1) 58%, rgba(3,117,183,1) 78%, rgba(117,189,204,1) 100%);
+        padding: 5px 4px;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        left: 30%;
+        width: 40%;
+        position: relative;
+    }
+
+    .QRCode{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+        border-radius: 7px;
+        background: black;
+    }
+
+    .QRCode p{
+        text-align: center;
+        color: white;
+        padding: 10px;
+    }
+
+    .QRCode img{
+       width: 20vw; 
+       padding: 10px;
+    }
+
+    .QRCode img:hover{
+        cursor: none;
+     }
+
 
     .facts{
         border: solid white 1px;

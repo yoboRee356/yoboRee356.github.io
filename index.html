@@ -9,35 +9,40 @@
 </head>
 
 <body>
-    <!--adding cursor effects and animation to look more appealing-->
-    <div class="cursor"></div>
+    <!-- adding cursor effects and animation to look more appealing
+    <div class="cursor"></div> -->
 
     <!--navbar to guide around the pages, creata a list and then add links-->
-    <nav class="navbar" id="temp">
-        <ul>
-            <li><a id="pageSharks" href="#">Sharks</a></li>
-            <li><a id="pageFacts" href="#">Facts</a></li>
-            <li><a id="pageBiology" href="#">Biology</a></li>
-            <li><a id="pageHistory" href="#">History</a></li>
-        </ul>
-    </nav>
+    <div>
+        <nav class="navbar" id="temp">
+            <ul>
+                <li><a id="pageSharks" href="#">Sharks</a></li>
+                <li><a id="pageFacts" href="#">Facts</a></li>
+                <li><a id="pageBiology" href="#">Biology</a></li>
+                <li><a id="pageHistory" href="#">History</a></li>
+            </ul>
+        </nav>
+
+
 
         <!--making the contents of what to teach-->
         <div class="content">
             <!--1 page content: taxonomy of sharks, a short history etc-->
             <div id="sharkPage" class="sharks" style="display: block;">
-                <div class="sharkText">
-                    <p>Sharks are a part of the subclass of fish known as the elasmobranch group as they are closely related to the Batoidea, the subclass for Ray fishes and kin.</p>
+                <div class="sharkLayout1">
+                    <div class="sharkText">
+                        <p>Sharks are a part of the subclass of fish known as the elasmobranch group as they are closely related to the Batoidea, the subclass for Ray fishes and kin.</p>
+        
+                        <p>Find out more about shark types and species with the buttons below!</p>
+                    </div>
     
-                    <p>Find out more about shark types and species with the buttons below!</p>
-                </div>
-
-                <div class="sharkImage">
-                    <img class="sharkImg1" src="https://th.bing.com/th/id/OIP.v3o49La3dLwYT7RxR2UQqQHaEK?w=290&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+                    <div class="sharkImage">
+                        <img class="sharkImg1" src="https://th.bing.com/th/id/OIP.v3o49La3dLwYT7RxR2UQqQHaEK?w=290&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+                    </div>
                 </div>
 
                 <!--subgenres of sharks where I'll talk about shark types, saltwater vs river vs etcetc, and shark species, e.g Mako Sharks. Adding boxes to interact with.-->
-                <div id="sub-content" class="sharkButtons" style="display: block;">
+                <div class="sharkButtons" style="display: block;">
                     <div class="sharkTypes">
                         <button id="showTypes">Types Of Sharks
                         </button>
@@ -51,6 +56,15 @@
                             </div>
                     </div>
                 </div>
+
+                <!--section for QR code in the homepage to access via phone set with linear gradient outline-->
+                <div class="QRCard">
+                    <div class="QRCode">
+                        <p>Scan the QR code to view this page with your phone!!</p>
+                        <img src="Images/QRCode2.png">
+                    </div>
+                </div>
+
             </div>
         
 
