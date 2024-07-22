@@ -65,7 +65,7 @@ function pageChanger(){
         bioText.style.display = "none";
         historyText.style.display = "none";
 
-        //display the
+        //display the buttons for the type
         dispSharkBtns();
     }
 
@@ -341,7 +341,24 @@ function factsQuiz(){
     displayQuestion();
 };
 
-function toggleSlides(){
+function feedbackForm(){
+    function feedbackFormSubmission(event) {
+        event.preventDefault();
+        
+        const username = document.getElementById('username').value;
+        const shark = document.getElementById('shark').value;
+        
+        const feedbackResult = document.getElementById('feedbackResult');
+        feedbackResult.innerHTML = `
+            <p>Thank you for your feedback, ${username}!</p>
+            <p>Your favorite shark is: ${shark}</p>
+        `;
+        feedbackResult.style.display = 'block';
+    
+        document.getElementById('feedbackForm').reset();
+    }
+    
+    document.getElementById('feedbackForm').addEventListener('submit', handleFeedbackFormSubmission);
     
 }
 
@@ -349,3 +366,6 @@ function toggleSlides(){
 pageChanger();
 
 factsQuiz();
+
+feedbackForm()
+
